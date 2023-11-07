@@ -1,4 +1,5 @@
 # Update the system and install basic utils
+cd ~
 sudo apt update
 sudo apt upgrade -y
 sudo apt install zip unzip tree build-essential -y
