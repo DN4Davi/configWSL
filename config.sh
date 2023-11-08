@@ -16,13 +16,9 @@ sed -i 's/git)/git zsh-syntax-highlighting)/' .zshrc
 # Install NVM and Node LTS
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
 tail -n 3 .bashrc >> .zshrc
-source .bashrc
-nvm install --lts
 
 # Install SDKMAN and Java 17-LTS
 curl -s "https://get.sdkman.io" | bash
-source "$HOME/.sdkman/bin/sdkman-init.sh"
-sdk install java 17.0.9-tem
 
 
 # Install Pyenv and Python
@@ -31,9 +27,6 @@ echo 'export PYENV_ROOT="$HOME/.pyenv"' >> ~/.bashrc
 echo 'command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"' >> ~/.bashrc
 echo 'eval "$(pyenv init -)"' >> ~/.bashrc
 tail -n 3 .bashrc >> .zshrc
-source .bashrc
-pyenv install 3.12.0
-pyenv global 3.12.0
 
 
 # Install Docker Engine
